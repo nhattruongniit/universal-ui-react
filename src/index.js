@@ -4,8 +4,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 // styles
-import "./index.css";
-import "styles/tailwind.css";
+import "styles/theme.css";
+import "styles/index.css";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
