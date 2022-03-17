@@ -64,10 +64,17 @@ function SongList() {
               <div className="songList_info_detail">
                 <div className="heading-06">{item.title}</div>
                 <p className="heading-07">{item.author}</p>
+                <p className="heading-07">{item.id}</p>
               </div>
-              <div className="songList_btnPlay" onClick={handlePlay(item)}>
+            </div>
+            <div className="songList_actions">
+              <a
+                href={`uniwebview://play-song?songId=${item.id}`}
+                className="songList_btnPlay"
+                onClick={handlePlay(item)}
+              >
                 <img src={ImageTextPlay} alt="" />
-              </div>
+              </a>
             </div>
           </div>
         ))}

@@ -22,7 +22,7 @@
   background-color: var(--white);
   display: flex;
   min-width: 294px;
-  height: 79px;
+  min-height: 79px;
 }
 
 .songList_item + .songList_item {
@@ -33,9 +33,9 @@
   align-items: flex-end;
   background-position: 50% 50%;
   background-size: cover;
-  display: flex;
   min-width: 79px;
-  height: 100%;
+  align-self: stretch;
+  display: flex;
 }
 
 .songList_voice {
@@ -88,21 +88,21 @@
 
 .songList_info_detail {
   height: 100%;
-  width: 110px;
   padding-top: 8px;
+  width: 85%;
 }
 
 .songList_btnPlay {
   background-image: url(assets/images/bg-play.svg);
-  background-size: 100% 100%;
-  min-width: 102px;
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
   height: 59px;
-  padding: 19px 20px;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  display: block;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .songList_score {
@@ -116,4 +116,10 @@
   letter-spacing: 0;
   text-align: center;
   text-shadow: 0px 0px 16px #ffffff7a;
+}
+
+.songList_actions {
+  position: relative;
+  width: 102px;
+  flex-shrink: 0;
 }
