@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // assets
 import ImageTextPlay from "assets/images/text-play.svg";
@@ -25,6 +25,15 @@ function SongList() {
   function handleBack() {
     setSong(null);
   }
+
+  useEffect(() => {
+    if (!song) return;
+
+    function finish(star) {
+      console.log("finish: ", star);
+    }
+    finish();
+  }, [song]);
 
   return (
     <div className="songList">
