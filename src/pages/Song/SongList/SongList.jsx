@@ -19,7 +19,8 @@ function SongList() {
   const [song, setSong] = useState(null);
 
   const handlePlay = (item) => () => {
-    setSong(item);
+    // setSong(item);
+    window.location.href = `uniwebview://play-song?songId=${item.id}`;
   };
 
   function handleBack() {
@@ -77,13 +78,13 @@ function SongList() {
               </div>
             </div>
             <div className="songList_actions">
-              <a
-                href={`uniwebview://play-song?songId=${item.id}`}
+              <div
+                // href={`uniwebview://play-song?songId=${item.id}`}
                 className="songList_btnPlay"
                 onClick={handlePlay(item)}
               >
                 <img src={ImageTextPlay} alt="" />
-              </a>
+              </div>
             </div>
           </div>
         ))}
