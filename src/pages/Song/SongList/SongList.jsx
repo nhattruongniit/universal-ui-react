@@ -17,6 +17,7 @@ import { data } from "./data";
 
 function SongList() {
   const [song, setSong] = useState(null);
+  const [star, setStar] = useState(null);
 
   const handlePlay = (item) => () => {
     // setSong(item);
@@ -27,14 +28,11 @@ function SongList() {
     setSong(null);
   }
 
-  useEffect(() => {
-    if (!song) return;
-
-    function finish(star) {
-      console.log("finish: ", star);
-    }
-    finish();
-  }, [song]);
+  function finish(star) {
+    // console.log("finish: ", star);
+    setStar(star);
+  }
+  // finish();
 
   return (
     <div className="songList">
@@ -85,6 +83,7 @@ function SongList() {
               >
                 <img src={ImageTextPlay} alt="" />
               </div>
+              <h6>{Number(star)}</h6>
             </div>
           </div>
         ))}
