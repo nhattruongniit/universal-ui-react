@@ -31,6 +31,7 @@ function SongList() {
 
   function finish(star) {
     // console.log("finish: ", star);
+    document.getElementById("star").innerHTML = Number(star);
     setStar(star);
   }
   // finish();
@@ -84,7 +85,7 @@ function SongList() {
               >
                 <img src={ImageTextPlay} alt="" />
               </div>
-              <h6>{Number(star)}</h6>
+              <div id="star" />
             </div>
           </div>
         ))}
