@@ -29,13 +29,6 @@ function SongList() {
     setSong(null);
   }
 
-  function finish(star) {
-    // console.log("finish: ", star);
-    document.getElementById("star").innerHTML = Number(star);
-    setStar(star);
-  }
-  // finish();
-
   return (
     <div className="songList">
       <h1 className="songList_title mb-6">Choose a song</h1>
@@ -85,7 +78,7 @@ function SongList() {
               >
                 <img src={ImageTextPlay} alt="" />
               </div>
-              <div id="star" />
+              {/* <div id="star" /> */}
             </div>
           </div>
         ))}
